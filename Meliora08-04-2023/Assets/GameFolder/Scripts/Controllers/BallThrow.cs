@@ -61,7 +61,7 @@ namespace Meliora08_04_2023.Controllers
                 _swipeDistance = (_endPos - _startPos).magnitude;
                 _swipeTime = _endTime - _startTime;
 
-                if(_swipeTime > 0.5f && _swipeDistance > 30f)
+                if(_swipeTime < 1f && _swipeDistance > 30f)
                 {
                     CallAngle();
                     CallSpeed();
@@ -99,7 +99,7 @@ namespace Meliora08_04_2023.Controllers
         void PickUpBall()
         {
             Vector3 mousePos = Input.mousePosition;
-            mousePos.z = Camera.main.nearClipPlane + 10f;
+            mousePos.z = Camera.main.nearClipPlane + 3f;
             _newPos = Camera.main.ScreenToWorldPoint(mousePos);
             gameObject.transform.localPosition = Vector3.Lerp(transform.position, _newPos, 80f * Time.deltaTime);
         }
