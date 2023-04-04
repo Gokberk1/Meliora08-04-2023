@@ -399,6 +399,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target30
       objectReference: {fileID: 0}
+    - target: {fileID: 970314349862610079, guid: b64ce554f6710334786b98fc3f349ad4, type: 3}
+      propertyPath: m_TagString
+      value: target30
+      objectReference: {fileID: 0}
     - target: {fileID: 970314350769784458, guid: b64ce554f6710334786b98fc3f349ad4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -631,6 +635,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Target10
       objectReference: {fileID: 0}
+    - target: {fileID: 3294200378776068689, guid: 8186eb6b5a9cf414ca61622c8f8375bf, type: 3}
+      propertyPath: m_TagString
+      value: target10
+      objectReference: {fileID: 0}
     - target: {fileID: 3294200378776068690, guid: 8186eb6b5a9cf414ca61622c8f8375bf, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -778,7 +786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8739259267266078478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10.6}
+  m_LocalPosition: {x: 0, y: 0, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8739259267098461469}
@@ -961,6 +969,10 @@ PrefabInstance:
     - target: {fileID: 2281408234322375505, guid: f19c074318147664583c5b2fcf8c708a, type: 3}
       propertyPath: m_Name
       value: Target15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281408234322375505, guid: f19c074318147664583c5b2fcf8c708a, type: 3}
+      propertyPath: m_TagString
+      value: target15
       objectReference: {fileID: 0}
     - target: {fileID: 2281408234322375506, guid: f19c074318147664583c5b2fcf8c708a, type: 3}
       propertyPath: m_RootOrder

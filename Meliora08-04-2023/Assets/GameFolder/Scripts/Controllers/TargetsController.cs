@@ -27,6 +27,26 @@ namespace Meliora08_04_2023.Controllers
             Vector3 offset = _direction * _factor;
             transform.position = offset + _startPosition;
         }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            BallThrow ball = collision.collider.GetComponent<BallThrow>();
+            if(ball != null)
+            {
+                if (gameObject.tag == "target10")
+                {
+                    Debug.Log("10");
+                }
+                else if (gameObject.tag == "target15")
+                {
+                    Debug.Log("15");
+                }
+                else if (gameObject.tag == "target30")
+                {
+                    Debug.Log("30");
+                }
+            }
+        }
     }
 }
 
