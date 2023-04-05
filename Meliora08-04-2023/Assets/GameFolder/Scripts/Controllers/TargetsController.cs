@@ -7,6 +7,7 @@ namespace Meliora08_04_2023.Controllers
 {
     public class TargetsController : MonoBehaviour
     {
+        [SerializeField] Animator _animator;
         [SerializeField] Vector3 _direction;
         [SerializeField] float _factor;
         [SerializeField] float _speed = 1f;
@@ -32,6 +33,7 @@ namespace Meliora08_04_2023.Controllers
             BallThrow ball = collision.collider.GetComponent<BallThrow>();
             if (ball != null)
             {
+                _animator.SetTrigger("Hit");
                 if (gameObject.tag == "target10")
                 {
                     GameManager.Instance.AddScore(10);

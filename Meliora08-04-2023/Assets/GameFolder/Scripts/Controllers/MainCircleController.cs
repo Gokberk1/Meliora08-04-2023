@@ -14,11 +14,11 @@ namespace Meliora08_04_2023.Controllers
         private Vector3 _startPos;
         private Vector3 _nextPos;
 
-        TargetsController _targetsController;
+        BallThrow _ball;
 
         private void Awake()
         {
-            _targetsController = new TargetsController();
+            _ball = new BallThrow();
 
             _startPos = transform.position;
             SetNextPosition();
@@ -42,10 +42,10 @@ namespace Meliora08_04_2023.Controllers
 
         private void OnCollisionEnter(Collision collision)
         {
-            BallThrow ballThrow = collision.collider.GetComponent<BallThrow>();
-            if(ballThrow != null)
+            _ball = collision.collider.GetComponent<BallThrow>();
+            if(_ball != null)
             {
-                GameManager.Instance.AddScore(0);
+                _ball.GetComponent<Collider>().enabled = false;
             }
         }
     }

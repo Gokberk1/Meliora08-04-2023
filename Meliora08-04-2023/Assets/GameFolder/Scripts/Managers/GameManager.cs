@@ -10,8 +10,8 @@ namespace Meliora08_04_2023.Managers
     {
         [SerializeField] int player1Score = 100;
         [SerializeField] int player2Score = 100;
-        [SerializeField] TextMeshProUGUI player1ScoreText;
-        [SerializeField] TextMeshProUGUI player2ScoreText;
+        [SerializeField] TextMeshProUGUI _player1ScoreTxt;
+        [SerializeField] TextMeshProUGUI _player2ScoreTxt;
         [SerializeField] TextMeshProUGUI _player1Name;
         [SerializeField] TextMeshProUGUI _player2Name;
 
@@ -33,13 +33,25 @@ namespace Meliora08_04_2023.Managers
             {
                 player2Score -= points;
             }
+
             UpdateScoreText();
         }
 
         private void UpdateScoreText()
         {
-            player1ScoreText.text = player1Score.ToString();
-            player2ScoreText.text = player2Score.ToString();
+            _player1ScoreTxt.text = player1Score.ToString();
+            _player2ScoreTxt.text = player2Score.ToString();
+
+            if(player1Score <= 0)
+            {
+                player1Score = 0;
+                Debug.Log("Player1 win");
+            }
+            if(player2Score <= 0)
+            {
+                player2Score = 0;
+                Debug.Log("Player2 win");
+            }
         }
 
         public void ChangePlayersTurn()

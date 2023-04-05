@@ -102,6 +102,7 @@ namespace Meliora08_04_2023.Controllers
             _rigidbody.velocity = Vector3.zero;
             _rigidbody.useGravity = false;
             transform.position = _ballDefaultPos;
+            gameObject.GetComponent<Collider>().enabled = true;
         }
 
         void PickUpBall()
