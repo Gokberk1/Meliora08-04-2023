@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Meliora08_04_2023.Managers;
 
 namespace Meliora08_04_2023.Controllers
 {
@@ -22,6 +23,7 @@ namespace Meliora08_04_2023.Controllers
         Vector3 _newPos;
         bool _thrown, _holding;
         Rigidbody _rigidbody;
+
 
         private void Awake()
         {
@@ -70,12 +72,18 @@ namespace Meliora08_04_2023.Controllers
                     _holding = false;
                     _thrown = true;
                     Invoke("ResetBall", 4f);
+                    Invoke("ChangeTurn", 4f);
                 }
                 else
                 {
                     ResetBall();
                 }
             }
+        }
+
+        void ChangeTurn()
+        {
+            GameManager.Instance.ChangePlayersTurn();
         }
 
         void ResetBall()

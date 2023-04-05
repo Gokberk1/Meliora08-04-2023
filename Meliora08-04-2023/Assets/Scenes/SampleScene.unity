@@ -544,6 +544,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3bb46c2d185b654bba515d5f2642c2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player1Score: 100
+  player2Score: 100
+  player1ScoreText: {fileID: 9094431847361861547}
+  player2ScoreText: {fileID: 9094431847361861546}
+  _player1Name: {fileID: 0}
+  _player2Name: {fileID: 0}
+  isPlayer1Turn: 1
 --- !u!4 &1569972446
 Transform:
   m_ObjectHideFlags: 0
@@ -809,7 +816,7 @@ GameObject:
   - component: {fileID: 8739259267266078480}
   m_Layer: 0
   m_Name: 'MainCircle '
-  m_TagString: Untagged
+  m_TagString: mainCircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -959,6 +966,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85c8842a97e78534aabd891a566c27f1, type: 3}
+--- !u!114 &9094431847361861546 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9094431846634441704, guid: 85c8842a97e78534aabd891a566c27f1, type: 3}
+  m_PrefabInstance: {fileID: 9094431847361861545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9094431847361861547 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9094431846992652057, guid: 85c8842a97e78534aabd891a566c27f1, type: 3}
+  m_PrefabInstance: {fileID: 9094431847361861545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &9170404995263406555
 PrefabInstance:
   m_ObjectHideFlags: 0

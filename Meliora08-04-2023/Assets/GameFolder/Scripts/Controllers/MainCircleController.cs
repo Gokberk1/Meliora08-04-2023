@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Meliora08_04_2023.Managers;
 
 namespace Meliora08_04_2023.Controllers
 {
@@ -13,8 +14,12 @@ namespace Meliora08_04_2023.Controllers
         private Vector3 _startPos;
         private Vector3 _nextPos;
 
-        private void Start()
+        TargetsController _targetsController;
+
+        private void Awake()
         {
+            _targetsController = new TargetsController();
+
             _startPos = transform.position;
             SetNextPosition();
         }
@@ -33,6 +38,15 @@ namespace Meliora08_04_2023.Controllers
             float x = Random.Range(-_xRange, _xRange);
             float y = Random.Range(-_yRange, _yRange);
             _nextPos = _startPos + new Vector3(x, y, 0f);
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            BallThrow ballThrow = collision.collider.GetComponent<BallThrow>();
+            if(ballThrow != null)
+            {
+                GameManager.Instance.AddScore(0);
+            }
         }
     }
 }
