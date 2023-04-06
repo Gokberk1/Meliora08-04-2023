@@ -169,7 +169,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!135 &542089188
 SphereCollider:
@@ -259,9 +259,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a98599ea19aca24d9971bc54065a78e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minSwipeDist: 0
   _maxBallSpeed: 100
   _smooth: 0.7
+  _scoreManagerGameObject: {fileID: 1892637516}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,6 +430,10 @@ PrefabInstance:
       propertyPath: _direction.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5313222430936391884, guid: b64ce554f6710334786b98fc3f349ad4, type: 3}
+      propertyPath: _scoreManagerGameObjet
+      value: 
+      objectReference: {fileID: 1892637516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b64ce554f6710334786b98fc3f349ad4, type: 3}
 --- !u!114 &792591219 stripped
@@ -628,6 +632,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1892637516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8391657346491703353, guid: 28f309528fd47f0439e2b89c6c20dd9a, type: 3}
+  m_PrefabInstance: {fileID: 8391657346824904770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1951809312 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9094431847571982867, guid: 85c8842a97e78534aabd891a566c27f1, type: 3}
@@ -714,6 +723,10 @@ PrefabInstance:
       propertyPath: _direction.x
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 7601018090162759170, guid: 8186eb6b5a9cf414ca61622c8f8375bf, type: 3}
+      propertyPath: _scoreManagerGameObjet
+      value: 
+      objectReference: {fileID: 1892637516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8186eb6b5a9cf414ca61622c8f8375bf, type: 3}
 --- !u!95 &2030887856 stripped
@@ -803,11 +816,11 @@ PrefabInstance:
       objectReference: {fileID: 479930416}
     - target: {fileID: 8391657346491703358, guid: 28f309528fd47f0439e2b89c6c20dd9a, type: 3}
       propertyPath: player1Score
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8391657346491703358, guid: 28f309528fd47f0439e2b89c6c20dd9a, type: 3}
       propertyPath: player2Score
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8391657346491703358, guid: 28f309528fd47f0439e2b89c6c20dd9a, type: 3}
       propertyPath: _player1ScoreTxt
@@ -1180,5 +1193,9 @@ PrefabInstance:
       propertyPath: _direction.x
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6584918889626351362, guid: f19c074318147664583c5b2fcf8c708a, type: 3}
+      propertyPath: _scoreManagerGameObjet
+      value: 
+      objectReference: {fileID: 1892637516}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f19c074318147664583c5b2fcf8c708a, type: 3}

@@ -7,7 +7,6 @@ namespace Meliora08_04_2023.Controllers
 {
     public class BallThrow : MonoBehaviour
     {
-        [SerializeField] float _minSwipeDist = 0;
         [SerializeField] float _maxBallSpeed = 40;
         [SerializeField] float _smooth;
         float _ballVelocity = 0;
@@ -25,10 +24,11 @@ namespace Meliora08_04_2023.Controllers
         Rigidbody _rigidbody;
 
         ScoreManager _scoreManager;
+        [SerializeField] GameObject _scoreManagerGameObject;
 
         private void Awake()
         {
-            _scoreManager = new ScoreManager();
+            _scoreManager = _scoreManagerGameObject.GetComponent<ScoreManager>();
             _ballDefaultPos = transform.position;
             ResetBall();
         }

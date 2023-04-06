@@ -15,10 +15,11 @@ namespace Meliora08_04_2023.Controllers
         Vector3 _startPosition;
 
         ScoreManager _scoreManager;
+        [SerializeField] GameObject _scoreManagerGameObjet;
 
         private void Awake()
         {
-            _scoreManager = new ScoreManager();
+            _scoreManager = _scoreManagerGameObjet.GetComponent<ScoreManager>();
             _startPosition = transform.position;
         }
         private void Update()
