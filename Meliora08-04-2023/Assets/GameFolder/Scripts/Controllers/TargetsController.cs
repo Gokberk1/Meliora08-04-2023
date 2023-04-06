@@ -12,11 +12,13 @@ namespace Meliora08_04_2023.Controllers
         [SerializeField] float _factor;
         [SerializeField] float _speed = 1f;
         const float FULL_CIRCLE = Mathf.PI * 2f;
-
         Vector3 _startPosition;
+
+        ScoreManager _scoreManager;
 
         private void Awake()
         {
+            _scoreManager = new ScoreManager();
             _startPosition = transform.position;
         }
         private void Update()
@@ -36,15 +38,15 @@ namespace Meliora08_04_2023.Controllers
                 _animator.SetTrigger("Hit");
                 if (gameObject.tag == "target10")
                 {
-                    GameManager.Instance.AddScore(10);
+                    _scoreManager.AddScore(10);
                 }
                 else if (gameObject.tag == "target15")
                 {
-                    GameManager.Instance.AddScore(15);
+                    _scoreManager.AddScore(15);
                 }
                 else if (gameObject.tag == "target30")
                 {
-                    GameManager.Instance.AddScore(30);
+                    _scoreManager.AddScore(30);
                 }
             }
         }

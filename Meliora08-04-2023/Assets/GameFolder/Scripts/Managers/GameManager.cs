@@ -1,62 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Meliora08_04_2023.Abstract.Utilities;
-using TMPro;
+
 
 namespace Meliora08_04_2023.Managers
 {
     public class GameManager : SingletonThisObject<GameManager>
     {
-        [SerializeField] int player1Score = 100;
-        [SerializeField] int player2Score = 100;
-        [SerializeField] TextMeshProUGUI _player1ScoreTxt;
-        [SerializeField] TextMeshProUGUI _player2ScoreTxt;
-        [SerializeField] TextMeshProUGUI _player1Name;
-        [SerializeField] TextMeshProUGUI _player2Name;
-
-        public bool isPlayer1Turn = true;
+        public event System.Action OnGameOver;
 
         private void Awake()
         {
             SingletonThisGameObject(this);
-            UpdateScoreText();
         }
 
-        public void AddScore(int points)
+        public void GameOver()
         {
-            if (isPlayer1Turn)
-            {
-                player1Score -= points;
-            }
-            else
-            {
-                player2Score -= points;
-            }
-
-            UpdateScoreText();
+            OnGameOver?.Invoke();
         }
 
-        private void UpdateScoreText()
+        public void LoadLevelScene()
         {
-            _player1ScoreTxt.text = player1Score.ToString();
-            _player2ScoreTxt.text = player2Score.ToString();
-
-            if(player1Score <= 0)
-            {
-                player1Score = 0;
-                Debug.Log("Player1 win");
-            }
-            if(player2Score <= 0)
-            {
-                player2Score = 0;
-                Debug.Log("Player2 win");
-            }
+            StartCoroutine(LoadLevelSceneAsync());
         }
-
-        public void ChangePlayersTurn()
+        public void LoadMenuScene()
         {
-            isPlayer1Turn = !isPlayer1Turn;
+            StartCoroutine(LoadMenuSceneAsync());
+        }
+        IEnumerator LoadLevelSceneAsync()
+        {
+            yield return SceneManager.LoadSceneAsync("GameScene");
+        }
+        IEnumerator LoadMenuSceneAsync()
+        {
+            yield return SceneManager.LoadSceneAsync("MenuScene");
+        }
+        public void ExitGame()
+        {
+            Application.Quit();
         }
     }
 }

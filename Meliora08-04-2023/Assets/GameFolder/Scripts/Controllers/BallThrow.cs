@@ -24,9 +24,11 @@ namespace Meliora08_04_2023.Controllers
         bool _thrown, _holding;
         Rigidbody _rigidbody;
 
+        ScoreManager _scoreManager;
 
         private void Awake()
         {
+            _scoreManager = new ScoreManager();
             _ballDefaultPos = transform.position;
             ResetBall();
         }
@@ -83,7 +85,7 @@ namespace Meliora08_04_2023.Controllers
 
         void ChangeTurn()
         {
-            GameManager.Instance.ChangePlayersTurn();
+            _scoreManager.ChangePlayersTurn();
         }
 
         void ResetBall()
