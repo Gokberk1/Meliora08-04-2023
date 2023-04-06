@@ -540,6 +540,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3294200378776068690, guid: 8186eb6b5a9cf414ca61622c8f8375bf, type: 3}
   m_PrefabInstance: {fileID: 1984641323}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1038287431 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1038287431, guid: 85c8842a97e78534aabd891a566c27f1, type: 3}
+  m_PrefabInstance: {fileID: 9094431847361861545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1113659165 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2281408234322375506, guid: f19c074318147664583c5b2fcf8c708a, type: 3}
@@ -806,6 +817,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8391657346491703358, guid: 28f309528fd47f0439e2b89c6c20dd9a, type: 3}
+      propertyPath: _winnerTmp
+      value: 
+      objectReference: {fileID: 1038287431}
     - target: {fileID: 8391657346491703358, guid: 28f309528fd47f0439e2b89c6c20dd9a, type: 3}
       propertyPath: _player1Name
       value: 

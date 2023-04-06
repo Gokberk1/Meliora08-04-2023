@@ -15,6 +15,7 @@ namespace Meliora08_04_2023.Managers
         [SerializeField] TextMeshProUGUI _player2ScoreTxt;
         [SerializeField] TextMeshProUGUI _player1Name;
         [SerializeField] TextMeshProUGUI _player2Name;
+        [SerializeField] TextMeshProUGUI _winnerTmp;
 
         public bool isPlayer1Turn = true;
 
@@ -43,11 +44,13 @@ namespace Meliora08_04_2023.Managers
             {
                 player1Score = 0;
                 GameManager.Instance.GameOver();
+                _winnerTmp.text = "oyuncu 1 kazandi";
             }
             if (player2Score <= 0)
             {
                 player2Score = 0;
                 GameManager.Instance.GameOver();
+                _winnerTmp.text = "oyuncu 2 kazandi";
             }
             _player1ScoreTxt.text = player1Score.ToString();
             _player2ScoreTxt.text = player2Score.ToString();
