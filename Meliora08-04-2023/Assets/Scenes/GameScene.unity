@@ -376,7 +376,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 970314349862610076, guid: b64ce554f6710334786b98fc3f349ad4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.6000004
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 970314349862610076, guid: b64ce554f6710334786b98fc3f349ad4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -688,7 +688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3294200378776068690, guid: 8186eb6b5a9cf414ca61622c8f8375bf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.6000004
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3294200378776068690, guid: 8186eb6b5a9cf414ca61622c8f8375bf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -948,7 +948,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8739259267098461470}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1.2}
   m_LocalScale: {x: 60, y: 0.2, z: 60}
   m_Children: []
   m_Father: {fileID: 8739259267266078477}
@@ -1001,7 +1001,7 @@ GameObject:
   - component: {fileID: 8739259267266078477}
   - component: {fileID: 8739259267266078479}
   - component: {fileID: 8739259267266078480}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 'MainCircle '
   m_TagString: mainCircle
   m_Icon: {fileID: 0}
@@ -1162,7 +1162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2281408234322375506, guid: f19c074318147664583c5b2fcf8c708a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.6000004
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2281408234322375506, guid: f19c074318147664583c5b2fcf8c708a, type: 3}
       propertyPath: m_LocalRotation.w

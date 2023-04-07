@@ -13,6 +13,7 @@ namespace Meliora08_04_2023.Controllers
         [SerializeField] float _speed = 1f;
         const float FULL_CIRCLE = Mathf.PI * 2f;
         Vector3 _startPosition;
+        bool _hit = false;
 
         ScoreManager _scoreManager;
         [SerializeField] GameObject _scoreManagerGameObjet;
@@ -49,6 +50,7 @@ namespace Meliora08_04_2023.Controllers
                 {
                     _scoreManager.AddScore(30);
                 }
+                
             }
         }
     }
