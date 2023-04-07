@@ -21,7 +21,7 @@ namespace Meliora08_04_2023.Controllers
         private void Awake()
         {
             _scoreManager = _scoreManagerGameObjet.GetComponent<ScoreManager>();
-            _startPosition = transform.position;
+            _startPosition = transform.localPosition;
         }
         private void Update()
         {
@@ -29,7 +29,7 @@ namespace Meliora08_04_2023.Controllers
             float sinWave = Mathf.Sin(cycle * FULL_CIRCLE);
             _factor = sinWave / 2f + 0.5f;
             Vector3 offset = _direction * _factor;
-            transform.position = offset + _startPosition;
+            transform.localPosition = offset + _startPosition;
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -50,7 +50,8 @@ namespace Meliora08_04_2023.Controllers
                 {
                     _scoreManager.AddScore(30);
                 }
-                
+
+                ball.GetComponent<Collider>().enabled = false;
             }
         }
     }

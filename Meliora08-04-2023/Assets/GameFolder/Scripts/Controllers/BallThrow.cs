@@ -69,7 +69,7 @@ namespace Meliora08_04_2023.Controllers
                 {
                     CallAngle();
                     CallSpeed();
-                    _rigidbody.AddForce( new Vector3((_angle.x * _ballSpeed), (_angle.y * _ballSpeed), (_angle.z * _ballSpeed)));
+                    _rigidbody.AddForce( new Vector3((_angle.x * _ballSpeed), (_angle.y * _ballSpeed * 0.8f), (_angle.z * _ballSpeed)));
                     _rigidbody.useGravity = true;
                     _holding = false;
                     _thrown = true;
